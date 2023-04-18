@@ -1,0 +1,24 @@
+zpool status = check on drives and see status of 
+zpool status -x = see the health status 
+zpool set autoexpand=on pool	
+zpool set autoreplace=on pool
+zpool scrub pool
+zpool status 1
+
+IPMI Error
+ipmitool sel list 
+ipmitool sel clear
+
+
+lvremove /dev/pve/data
+lvresize -l +100%FREE /dev/pve/root
+resize2fs /dev/mapper/pve-root
+
+
+fdisk /dev/sdb
+p
+d
+p
+w
+
+
