@@ -21,4 +21,50 @@ d
 p
 w
 
+Bit rot:
 
+https://www.sqlskills.com/blogs/jonathan/bitten-by-ssd-bit-rot/
+
+geom disk list
+
+#zpool create -o version=28 -O version=5 <poolname> <drive1>
+
+zfs destroy reflection/cdatos
+zpool destroy reflection
+
+https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/
+
+https://openzfs.github.io/openzfs-docs/man/7/zpool-features.7.html
+
+Links to an external site.
+
+https://wiki.archlinux.org/title/ZFS#Using_zfs-mount-generator
+
+Links to an external site.
+
+ 
+
+zpool set -o feature@hole_birth=enabled
+
+zpool create -o autoexpand=on -o ashift=12 -o version=28 -O version=5 -m /mnt/p usbpool mirror /1.bin /2.bin
+
+[manjaro manjaro]# zfs create -o xattr=sa -o atime=off -o compression=on -o casesensitivity=sensitive -o aclmode=discard -o aclinherit=restricted|=passthrough reflection/cdatos
+[manjaro manjaro]# zpool export reflection
+
+ 
+
+https://docs.oracle.com/cd/E19253-01/819-5461/gaztk/index.html
+
+[manjaro manjaro]# zpool import -d / piscina
+[manjaro manjaro]# zpool status
+
+
+https://jrs-s.net/2018/08/17/zfs-tuning-cheat-sheet/
+
+Links to an external site.
+
+ 
+
+https://mattgadient.com/9w-idle-creating-a-low-power-home-nas-file-server-with-4-storage-drives/
+    
+https://www.techradar.com/news/computing/how-to-build-a-low-power-server-1091244
